@@ -1,0 +1,12 @@
+
+## 권한관리 OprnLDAP 인증 API
+POST http://10.30.175.15:8180/send
+Content-Type: application/json
+
+{
+  "serviceName": "서비스명",
+  "callApiUrl": "http://비동기가필요한시스템의아이피:8080/call",
+  "errorUrl": "http://비동기가필요한시스템의아이피:8080/error"
+}
+
+###

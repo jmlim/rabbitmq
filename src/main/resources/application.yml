@@ -1,0 +1,24 @@
+spring:
+  data:
+    mongodb:
+      username: jmlim
+      password: 12345
+      uri: mongodb://비동기가필요한시스템의아이피/api_log
+  rabbitmq:
+    host: localhost
+    port: 5672
+    listener:
+      simple:
+        retry:
+          enabled: true
+          ## 실패시 재시도 횟수 제한.
+          max-attempts: 1
+
+logging:
+  level:
+    org:
+      springframework:
+        data: debug
+
+server:
+  port: 8180
